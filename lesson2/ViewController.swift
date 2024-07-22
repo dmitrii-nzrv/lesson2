@@ -8,16 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     lazy var viewWidth = view.frame.size.width
     lazy var viewHeight = view.frame.size.height
-    
     
     // MARK: UI
     lazy var headerImage: UIImageView = {
         $0.image = UIImage(named: "img1")
         $0.frame = CGRect(x: view.frame.minX, y: view.frame.minY, width: viewWidth, height: viewHeight/5)
-        
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFill
         
@@ -32,8 +29,6 @@ class ViewController: UIViewController {
     
         return $0
     }(UIImageView())
-    
-
     
     lazy var namesurnameLabel: UILabel = {
         $0.text = "Имя Фамилия"
@@ -57,7 +52,6 @@ class ViewController: UIViewController {
         $0.text = "Добавить описание"
         $0.frame = CGRect(x: profileImage.frame.minX, y: profileImage.frame.maxY+viewHeight/40, width: viewWidth/2, height: viewHeight/40)
         
-        
         return $0
     }(UILabel())
     
@@ -66,20 +60,14 @@ class ViewController: UIViewController {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 30
         $0.backgroundColor = .placeholderText
+        
         return $0
-        
-        
-        
-        
-        
     }(UITextView())
     
     lazy var passwordLabel: UILabel = {
         $0.text = "Изменить пароль"
         $0.frame = CGRect(x: descr.frame.minX, y: descr.frame.maxY+viewHeight/20, width: viewWidth/2, height: viewHeight/40)
-        
-        
-        
+    
         return $0
     }(UILabel())
     
@@ -89,10 +77,7 @@ class ViewController: UIViewController {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 10
         $0.backgroundColor = .placeholderText
-        
-        
-        
-        
+    
         return $0
     }(UITextField())
     
@@ -112,8 +97,6 @@ class ViewController: UIViewController {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 12
         $0.backgroundColor = .systemBlue
-        
-        
        
         return $0
     }(UIButton())
@@ -142,8 +125,6 @@ extension ViewController {
         view.addSubview(oldPasswordField)
         view.addSubview(newPassowordField)
         view.addSubview(saveBtn)
-        
-        
     }
     
 }
